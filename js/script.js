@@ -458,7 +458,7 @@ else if( BMI < 25){
 
     }
   else{
-        imageS = `/img/girl2.png`;
+        imageS = `img/girl2.png`;
   }
 
 }
@@ -466,10 +466,10 @@ else if( BMI < 30){
     cetagory = "Overweight";
     tagClass = "overweight"
     if(gender === 'male'){
-    imageS = `/img/man3.png`;
+    imageS = `img/man3.png`;
     }
   else{
-        imageS = `/img/girl3.png`;
+        imageS = `img/girl3.png`;
   }
 
 }
@@ -477,10 +477,10 @@ else if( BMI < 35){
     cetagory = "Obase I";
     tagClass ="obese1"
     if(gender === 'male'){
-    imageS = `/img/man4.png`;
+    imageS = `img/man4.png`;
     }
   else{
-        imageS = `/img/girl4.png`;
+        imageS = `img/girl4.png`;
   }
 
 }
@@ -488,10 +488,10 @@ else{
     cetagory = "Obase II+";
     tagClass = "obese2";
     if(gender === 'male'){
-    imageS = `/img/man5.png`;
+    imageS = `img/man5.png`;
     }
   else{
-        imageS = `/img/girl5.png`;
+        imageS = `img/girl5.png`;
   }
     
 
