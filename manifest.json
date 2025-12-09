@@ -1,7 +1,7 @@
 {
   "name": "Tuhin App",
   "short_name": "Tuhin",
-  "start_url": "/web.app/",
+  "start_url": "/BMI-calc.web/",
   "scope": "/web.app/",
   "display": "standalone",
   "background_color": "#ffffff",
