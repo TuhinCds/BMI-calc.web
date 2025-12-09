@@ -241,7 +241,7 @@ if( BMI < 18.5){
     cetagory = "Underweight";
     tagClass = "underweight";
     if(gender === 'male'){
-    imageS = `/img/man1.png`;
+    imageS = `img/man1.png`;
     //THIS PLACE IS ADVICE SECTIONS 
    adviceHeader = 'Underweight body to Normal weight for Girl';
         adviceTitle1 = '';
@@ -312,7 +312,7 @@ if( BMI < 18.5){
 
     }
   else{
-        imageS = `/img/girl1.png`;
+        imageS = `img/girl1.png`;
       adviceHeader = 'Underweight body to Normal weight for Girl';
         adviceTitle1 = '';
         adviceTitle2 = '';
@@ -388,7 +388,7 @@ else if( BMI < 25){
     cetagory = "Normal";
     tagClass = "normal";
     if(gender === 'male'){
-    imageS = `/img/man2.png`;
+    imageS = `img/man2.png`;
     adviceHeader = ' Normal weight for Boy';
         adviceTitle1 = 'Eat a balanced deit';
         adviceTitle2 = 'Reguler Exarcise';
