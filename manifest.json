@@ -1,11 +1,11 @@
 {
-  "name": "Tuhin App",
-  "short_name": "Tuhin",
+  "name": "BMI Checker",
+  "short_name": "BMI-Calc",
   "start_url": "/BMI-calc.web/",
-  "scope": "/web.app/",
+  "scope": "/BMI-calc.web/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "background_color": "#000000",
+  "theme_color": "#000000",
   "icons": [
     {
       "src": "img/—Pngtree—gym weight icon on white_5305047.png",
