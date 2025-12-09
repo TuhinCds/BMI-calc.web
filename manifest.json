@@ -1,0 +1,21 @@
+{
+  "name": "Tuhin App",
+  "short_name": "Tuhin",
+  "start_url": "/web.app/",
+  "scope": "/web.app/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "img/—Pngtree—gym weight icon on white_5305047.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/—Pngtree—gym weight icon on white_5305047.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
