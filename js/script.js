@@ -660,7 +660,7 @@ else{
                 </div>
             </div>
             <div class="suggest-body">
-                 <a class="btnConMakeR"href="/pages/RoutineGenerator.html"><i class="fa-solid fa-plus"></i>&nbsp;Make Rutin</a>
+                 <a class="btnConMakeR"href="pages/RoutineGenerator.html"><i class="fa-solid fa-plus"></i>&nbsp;Make Rutin</a>
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <ul class="suggest-list">
@@ -683,7 +683,7 @@ else{
                 </div>
             </div>
             <div class="suggest-body">
-                 <a class="btnConMakeR"href="/pages/RoutineGenerator.html"><i class="fa-solid fa-plus"></i>&nbsp;Make Rutin</a>
+                 <a class="btnConMakeR"href="pages/RoutineGenerator.html"><i class="fa-solid fa-plus"></i>&nbsp;Make Rutin</a>
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <ul class="suggest-list">
@@ -706,7 +706,7 @@ else{
                 </div>
             </div>
             <div class="suggest-body">
-                 <a class="btnConMakeR"href="/pages/RoutineGenerator.html"><i class="fa-solid fa-plus"></i>&nbsp;Make Rutin</a>
+                 <a class="btnConMakeR"href="pages/RoutineGenerator.html"><i class="fa-solid fa-plus"></i>&nbsp;Make Rutin</a>
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <ul class="suggest-list">
@@ -729,7 +729,7 @@ else{
                 </div>
             </div>
             <div class="suggest-body">
-                 <a class="btnConMakeR"href="/pages/RoutineGenerator.html"><i class="fa-solid fa-plus"></i>&nbsp;Make Rutin</a>
+                 <a class="btnConMakeR"href="pages/RoutineGenerator.html"><i class="fa-solid fa-plus"></i>&nbsp;Make Rutin</a>
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <ul class="suggest-list">
@@ -752,7 +752,7 @@ else{
                 </div>
             </div>
             <div class="suggest-body">
-                 <a class="btnConMakeR"href="/pages/RoutineGenerator.html"><i class="fa-solid fa-plus"></i>&nbsp;Make Rutin</a>
+                 <a class="btnConMakeR"href="pages/RoutineGenerator.html"><i class="fa-solid fa-plus"></i>&nbsp;Make Rutin</a>
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <ul class="suggest-list">
