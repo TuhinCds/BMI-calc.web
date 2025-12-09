@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="white">
+    <title>Body Fix</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet"href="/src/fontawesome-free-6.7.2-web/css/all.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="icon"href="/img/logo.png"type="image/png" sizes="6464">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="Ai-mode">
+            <button id="aiMode"><i class="ri-shining-2-fill"></i>&nbsp;AI Mode</button>
+        </div>
+        <div class="headers-btns">
+            <button id="Body"><i class="fa-solid fa-child"></i>&nbsp;Body</button>
+            <button id="BMI"><i class="fa-solid fa-bolt"></i>Body BMI</button>
+             <div class="con-header-slider"></div>
+        </div>
+        <div class="headers-control">
+           <a href="index.html">
+            <button><i class="fa-solid fa-arrow-rotate-right"></i></button>
+          
+
+            </a>
+              <a id="ChartLI" href="#bmiCR"></a>
+            <button id="btnSetting"onclick="SettingOpenl()"><i class="fa-solid fa-gear"></i></button>
+            <div id="dropdown"class="dropdown one wwv1">
+                <button onclick="CrossBarToggle()"id="cross-setting-menu"><i class="fa-solid fa-xmark"></i></button>
+                <ul>
+                    <li><a href="#"><i class="fa-brands icon fa-microsoft"></i>My Portfolio</a></li>
+                    <li><a href="#"><i class="fa-regular icon  fa-address-card"></i>About Us</a></li>
+                    <li><a href="#"><i class="fa-solid icon fa-lock"></i>Privacy Policy</a></li>
+                    <li><a href="#"><i class="fa-regular icon fa-address-book"></i>Contact Us</a></li>
+                    <li><a href="#"><i class="fa-solid icon fa-code"></i>Developer Tuhin</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div  class="container">
+        <div class="center">
+        <div class="top-side">
+           
+                <div class="your-body">Your Body Fitness</div>
+                    <button id="Mode"><i class="fa-solid fa-child-reaching"></i> Body Info</button>
+                    <button id="doctor"><i class="fa-solid fa-stethoscope"></i></button>
+                    <button id="info-btn"><i class="fa-solid fa-circle-info"></i></button>
+        </div>
+        </div>
+        <div id="containerBBC" class="middle-side">
+        <div id="middleSideCon"class="middle-side-con">
+      <div class="upper-txt">Your Details &nbsp;<i class="fa-solid fa-pen-to-square"></i></div>
+        <div class="inputs-BMI">
+                <div class="input-group">
+                <div class="age-fild common">
+                    <label for="age">Age</label>
+                    <div id="ageF"class="input-group-age">
+                    <input id="age" type="number">
+                    <div id="ageF"class="age-text">years</div>
+                    </div>
+                </div>
+                <div class="weight-fild common">
+                    <label for="weight">Weight</label>
+                 <div id="weightF" class="input-group-weight">
+                    <input id="weight"type="number">
+                    <div class="weight-text">Kg</div>
+                    </div>
+                </div>
+                </div>
+                <div class="input-group">
+                <div class="height-fild common">
+                    <label for="height">height</label>
+                    <div id="heightF" class="height-input-filds-n">
+                    <input id="height" type="number">
+                    <select onchange="toggleHeightInChange()" id="height-text">
+                        <option value="ft">ft</option>
+                        <option value="cm">cm</option>
+                    </select>
+                    </div>
+                </div>
+                <div id="incLJ"class="in-fild common">
+                    <label for="in">Inc</label>
+                    <div class="input-group-in">
+                    <input id="inc"type="number">
+                    <div class="in-text">inc</div>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+                            <div class="input-group">
+                  <div class="name-sec">
+                    <input id="userName"type="text"placeholder="Your Name">
+                  </div>
+                <div class="gender-fild common">
+                    <div class="gender-text">Gender</div>
+                 <select id="gender-select">
+                    <option value="male">Male</option>
+                    <option value="Female">Female</option>
+                 </select>
+                </div>
+                </div>
+                <br>
+            <button onclick="userDataPost()"id="data">Post Your Details &nbsp;<i class="fa-solid fa-upload"></i></button>
+           
+            <div class="data-sec">
+                 <a href="/pages/RoutineGenerator.html"><button id="rutinBtn"><i class="fa-solid fa-pen-to-square"></i> Make Diet Rutin</button></a>
+            <button onclick="userDataBMI()" id="bmi-data"><i class="fa-solid fa-bolt"></i>&nbsp;BMI</button>
+            </div>
+        </div>
+              <div id="resultSec"class="result-sec">
+   
+            </div>
+         </div>
+      <div id="containerTwo"class="container-two">
+              <div id="2DImage"class="threeD-viwe">
+
+            </div>
+          <div id="bmiCR"class="bmi-output">
+
+  <canvas id="bmiChart" width="270" height="270"></canvas>
+
+
+
+  <div id="legend"class="legend">
+  
+  </div>
+          </div>
+     </div>
+     <div id="table-rutin-con-and-suggest">
+                 <div  id="goToRutinTable"class="table-rutin-div">
+                    <div class="span-tabeel-up">
+                    <span id="table-span-text">Your Diet Rutin <i class="ri-file-text-line"></i></span>
+                    <a href="/pages/RoutineGenerator.html" id="create-rutin"><i class="fa-solid fa-pen-to-square"></i> Create</a>
+                    </div>
+                <table id="table-rutin"  style="width: 100%; text-align: center">
+                    <thead>
+                    <tr>
+                        <th>
+                            <div id="header-table-se1"><i class="fa-solid fa-clock"></i>&nbsp;Time</div>
+                        </th>
+                        <th>
+                            <div id="header-table-se2"><i class="fa-solid fa-utensils"></i>&nbsp;Eat</div>
+                        </th>
+                        <th>
+                            <div id="header-table-sec3"><i class="fa-solid fa-person-running"></i>&nbsp;Workout</div>
+                        </th>
+                        <th>
+                            <div id="header-table-sec4"><i class="fa-solid fa-circle-check"></i>&nbsp;Tips</div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Time"><i class="fa-solid fa-clock"></i>&nbsp;6:00 - 7:00 AM</td>
+                            <td data-label="What to Eat">1 glass warm water + lemon</td>
+                            <td data-label="Workout">15 min walk or light jogging</td>
+                            <td data-label="Tips">Boosts metabolism and burns fat </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Time"><i class="fa-solid fa-clock"></i>&nbsp;6:00 - 7:00 AM</td>
+                            <td data-label="What to Eat">1 glass warm water + lemon</td>
+                            <td data-label="Workout">1 glass warm water + lemon</td>
+                            <td data-label="Tips">1 glass warm water + lemon</td>
+                        </tr>
+                         <tr>
+                            <td data-label="Time"><i class="fa-solid fa-clock"></i>&nbsp;6:00 </td>
+                            <td data-label="What to Eat">1 glass warm water + lemon</td>
+                            <td data-label="Workout">1 glass warm water + lemon</td>
+                            <td data-label="Tips">1 glass warm water + lemon</td>
+                        </tr>
+                         <tr>
+                            <td data-label="Time"><i class="fa-solid fa-clock"></i>&nbsp;10:00 PM</td>
+                            <td data-label="What to Eat">1 glass warm water + lemon</td>
+                            <td data-label="Workout">1 glass warm water + lemon</td>
+                            <td data-label="Tips">1 glass warm water + lemon</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Time"><i class="fa-solid fa-clock"></i>&nbsp;4:30 PM</td>
+                            <td data-label="What to Eat">1 glass warm water + lemon</td>
+                            <td data-label="Workout">1 glass warm water + lemon</td>
+                            <td data-label="Tips">1 glass warm water + lemon</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="img-suggestImg">
+                            <img src="/img/Boost your immune system-cuate.svg">
+                            <div class="responseForYou">
+                                <h2 ><i class="fa-solid fa-list-ul"></i><span id="titleForRes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, consequatur?</span></h2>
+                                <p><i class="fa-solid fa-circle-notch"></i><span id="res1">nam quod laborum eligendi nesciunt, quaerat saepe aut alias tempora ad iure dicta cupiditate delectus tempore, sint accusamus, tenetur reprehenderit perferendis?</span></p>
+                                <p><i class="fa-solid fa-circle-notch"></i><span id="res2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, veritatis.</span></p>
+                                <p><i class="fa-solid fa-circle-notch"></i><span  id="res3">ipisicing elit. Numquam, laboriosam.</span></p>
+                                <div class="go-chart">
+                                    <a class="bmiGoing"href="#bmiChart">Go to BMI Chart&nbsp;<i class="ri-pie-chart-2-fill"></i></a>
+                                    <div class="go-all">
+                                    <a href="#goToRutinTable"><i class="fa-solid fa-table"></i></a>
+                                    <a href="#LikeYouCall"><i class="fa-solid fa-person"></i></a>
+                                    <a href="#"></a>
+                                    </div>
+                                </div>
+
+                            </div>
+            </div>
+
+     <div class="suggestionY">
+        <div class="header-suggest"><i class="ri-dvd-ai-line"></i>&nbsp;Suggestion for <span id="nameUserX"></span> And <span id="bmiStatas"></span> BMI</div>
+        <div id="InSuggestAdvice"class="sugest-display">
+
+ 
+    </div>
+    </div>
+    </div>
+
+<!--DATA LOADER SECTION -->
+
+<div class="class-2m">
+  <div class="error" id="errorMsg1"></div>
+  <div class="error" id="errorMsg2"></div>
+  <div  class="circle-container">
+    <div  id="cr" class="circle-loader-display">
+ <div class="felx-i">
+    <div class="circle" id="circle">
+      <div class="percent" id="percent">0%</div>
+    </div>
+    <div class="loading-text">Loading...</div>
+</div>
+</div>
+  </div>
+</div>
+
+
+    <div id="footer"class="footer">&copy; <span id="year"></span> | Developer <span id="authorL"></span> | All rights reserved.</div>
+
+    <script src="/src/fontawesome-free-6.7.2-web/css/all.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/chart.js"></script>
+    <script src="/js/RoutineGenerator.js"></script>
+</body>
+</html>

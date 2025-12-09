@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routine Generator </title>
+    <link rel="stylesheet" href="/src/fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="stylesheet" href="/css/RoutineGenerator.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header_left">
+                <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <h2><i class="fas fa-brain"></i>Make Routine</h2>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar" id="sidebar">
+                <h2><i class="fas fa-history"></i> Saved Routines</h2>
+                <div class="saved-routines" id="savedRoutines">
+                    <!-- Routines will be loaded here -->
+                </div>
+                <button class="btn new-routine-btn" id="newRoutineBtn">
+                    <i class="fas fa-plus"></i> New Routine
+                </button>
+            </div>
+
+            <div class="content-area">
+                <div class="form-container active" id="inputForm">
+                    <h2><i class="fas fa-user-edit"></i> Personal Information</h2>
+                    <form id="routineForm">
+                        <div class="form-group">
+                            <label for="routineName"><i class="fas fa-tag"></i> Routine Name</label>
+                            <input type="text" id="routineName" placeholder="My Daily Plan">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Name</label>
+                                <input type="text" id="name" placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="age"><i class="fas fa-birthday-cake"></i> Age</label>
+                                <input type="number" id="age" placeholder="25" min="10" max="120">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="gender"><i class="fas fa-venus-mars"></i> Gender</label>
+                                <select id="gender">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weight"><i class="fas fa-weight"></i> Weight (kg)</label>
+                                <input type="number" id="weight" placeholder="70" min="30" max="300">
+                            </div>
+                            <div class="form-group">
+                                <label for="height"><i class="fas fa-ruler-vertical"></i> Height (cm)</label>
+                                <input type="number" id="height" placeholder="175" min="100" max="250">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="goal"><i class="fas fa-bullseye"></i> Goal</label>
+                            <select id="goal">
+                                <option value="lose">Lose Weight</option>
+                                <option value="maintain">Maintain Weight</option>
+                                <option value="gain">Gain Weight</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="activity"><i class="fas fa-running"></i> Activity Level</label>
+                            <select id="activity">
+                                <option value="sedentary">Sedentary (little or no exercise)</option>
+                                <option value="light">Lightly active (light exercise 1-3 days/week)</option>
+                                <option value="moderate">Moderately active (moderate exercise 3-5 days/week)</option>
+                                <option value="active">Very active (hard exercise 6-7 days/week)</option>
+                                <option value="extreme">Extremely active (very hard exercise & physical job)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="foodType"><i class="fas fa-utensils"></i> Food Preference</label>
+                            <select id="foodType">
+                                <option value="balanced">Balanced</option>
+                                <option value="vegetarian">Vegetarian</option>
+                                <option value="vegan">Vegan</option>
+                                <option value="lowcarb">Low Carb</option>
+                                <option value="highprotein">High Protein</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="wakeTime"><i class="fas fa-bed"></i> Wake-up Time</label>
+                                <input type="time" id="wakeTime" value="07:00">
+                            </div>
+                            <div class="form-group">
+                                <label for="sleepTime"><i class="fas fa-moon"></i> Bedtime</label>
+                                <input type="time" id="sleepTime" value="23:00">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="workHours"><i class="fas fa-briefcase"></i> Work/School Hours</label>
+                            <div class="time-range">
+                                <input type="time" id="workStart" value="09:00">
+                                <span>to</span>
+                                <input type="time" id="workEnd" value="17:00">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="medical"><i class="fas fa-heartbeat"></i> Medical Conditions (optional)</label>
+                            <textarea id="medical" placeholder="Any allergies, conditions or restrictions"></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn generate-btn">
+                                <i class="fas fa-magic"></i> Generate Routine
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="resetForm">
+                                <i class="fas fa-redo"></i> Reset
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="results-container" id="resultsContainer">
+                    <div class="results-header">
+                        <p id="routineTitle">Your Personalized Routine</p>
+                        <div class="result-actions">
+                            <button class="btn" id="saveRoutineBtn">
+                                <i class="fas fa-save"></i> Save
+                            </button>
+                            <button class="btn btn-secondary" id="editRoutineBtn">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                            <button class="btn btn-secondary" id="printRoutineBtn">
+                                <i class="fas fa-print"></i> Print
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="summary-card">
+                        <div class="summary-item">
+                            <i class="fas fa-fire"></i>
+                            <div>
+                                <h3>Daily Calories</h3>
+                                <p id="summaryCalories">-</p>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-tint"></i>
+                            <div>
+                                <h3>Water Intake</h3>
+                                <p id="summaryWater">-</p>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-dumbbell"></i>
+                            <div>
+                                <h3>Workout Time</h3>
+                                <p id="summaryWorkout">-</p>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <i class="fas fa-moon"></i>
+                            <div>
+                                <h3>Sleep Duration</h3>
+                                <p id="summarySleep">-</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="routine-schedule">
+                        <h3><i class="fas fa-clock"></i> Daily Schedule</h3>
+                        <div class="timeline" id="timeline">
+                            <!-- Timeline items will be added here -->
+                        </div>
+                    </div>
+
+                    <div class="meal-plan">
+                        <h3><i class="fas fa-utensils"></i> Meal Plan</h3>
+                        <div class="meals-grid" id="mealsGrid">
+                            <!-- Meal cards will be added here -->
+                        </div>
+                    </div>
+
+                    <div class="workout-plan">
+                        <h3><i class="fas fa-dumbbell"></i> Workout Recommendations</h3>
+                        <div class="workouts-list" id="workoutsList">
+                            <!-- Workout items will be added here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="saveModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3><i class="fas fa-save"></i> Save Routine</h3>
+            <div class="form-group">
+                <label for="saveRoutineName">Routine Name</label>
+                <input type="text" id="saveRoutineName" placeholder="My Awesome Routine">
+            </div>
+            <button class="btn" id="confirmSave">Save Routine</button>
+        </div>
+    </div>
+
+    <div class="modal" id="confirmModal">
+        <div class="modal-content">
+            <h3 id="confirmTitle">Confirm Action</h3>
+            <p id="confirmMessage">Are you sure you want to perform this action?</p>
+            <div class="modal-actions">
+                <button class="btn" id="confirmAction">Confirm</button>
+                <button class="btn btn-secondary" id="cancelAction">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/RoutineGenerator.js"></script>
+</body>
+</html>
